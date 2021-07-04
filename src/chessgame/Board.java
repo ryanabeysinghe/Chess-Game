@@ -64,7 +64,7 @@ public class Board extends JComponent {
         whitePieces.add(new Pawn(4, 1, true, "pawnPiece.png", this));
         whitePieces.add(new Pawn(5, 1, true, "pawnPiece.png", this));
         whitePieces.add(new Pawn(6, 1, true, "pawnPiece.png", this));
-        //whitePieces.add(new Pawn(7, 1, true, "pawnPiece.png", this));
+        whitePieces.add(new Pawn(7, 1, true, "pawnPiece.png", this));
 
         blackPieces.add(new Rook(0, 7, false, "rookPiece.png", this));
         blackPieces.add(new Rook(7, 7, false, "rookPiece.png", this));
