@@ -10,15 +10,24 @@ public class Queen extends Piece {
     }
     
     @Override
-    public boolean canMove(int destination_x, int destination_y)
-    {
+    public boolean canMove(int destX, int destY) {
         // Remember: A Queen can move as many squares as she wants forward, 
         // backward, sideways, or diagonally, without jumping over any pieces.
         // She cannot attack her own pieces.
-        
-                // WRITE CODE HERE
 
-        
+        // WRITE CODE HERE
+        Piece destPiece = board.getPiece(destX, destY);
+
+        if (destPiece != null) {
+            if ((destPiece.isWhite() && this.isWhite()) || (!destPiece.isWhite() && !this.isWhite())) {
+                return false;
+            }
+        }
+
+        if (((Math.abs(this.getX() - destX) != Math.abs((this.getY() - destY))) && ((this.getX() != destX) && (this.getY() != destY)))) {
+            return false;
+        }
+
         return true;
     }
 }
