@@ -62,4 +62,76 @@ public class Piece {
     {
         return false;
     }
+    
+    public boolean inDanger(int x, int y) {
+        for (int i = x + 1; i < 8; i++) {
+            if (board.getPiece(i, y) == null) {
+                continue;
+            } else if (board.getPiece(i, y).isWhite() == this.isWhite()) {
+                if (board.getPiece(i, y) instanceof King) {
+                    continue;
+                } else {
+                    break;
+                }
+            } else {
+                if ((board.getPiece(i, y) instanceof Rook) || (board.getPiece(i, y) instanceof Queen)) {
+                    return true;
+                } else {
+                    break;
+                }
+            }
+        }
+        for (int i = x - 1; i >= 0; i--) {
+            if (board.getPiece(i, y) == null) {
+                continue;
+            } else if (board.getPiece(i, y).isWhite() == this.isWhite()) {
+                if (board.getPiece(i, y) instanceof King) {
+                    continue;
+                } else {
+                    break;
+                }
+            } else {
+                if ((board.getPiece(i, y) instanceof Rook) || (board.getPiece(i, y) instanceof Queen)) {
+                    return true;
+                } else {
+                    break;
+                }
+            }
+        }
+        for (int i = y + 1; i < 8; i++) {
+            if (board.getPiece(x, i) == null) {
+                continue;
+            } else if (board.getPiece(x, i).isWhite() == this.isWhite()) {
+                if (board.getPiece(x, i) instanceof King) {
+                    continue;
+                } else {
+                    break;
+                }
+            } else {
+                if ((board.getPiece(x, i) instanceof Rook) || (board.getPiece(x, i) instanceof Queen)) {
+                    return true;
+                } else {
+                    break;
+                }
+            }
+        }
+        for (int i = y - 1; i >= 0; i--) {
+            if (board.getPiece(x, i) == null) {
+                continue;
+            } else if (board.getPiece(x, i).isWhite() == this.isWhite()) {
+                if (board.getPiece(x, i) instanceof King) {
+                    continue;
+                } else {
+                    break;
+                }
+            } else {
+                if ((board.getPiece(x, i) instanceof Rook) || (board.getPiece(x, i) instanceof Queen)) {
+                    return true;
+                } else {
+                    break;
+                }
+            }
+        }
+        return false;
+    }
 }
