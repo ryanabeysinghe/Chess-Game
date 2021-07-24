@@ -20,4 +20,4 @@ Use NetBeans IDE to be able to display the Graphical User Interface Chess Board 
   * Queen : 1 piece
   * King : 1 piece
 * Initial setup :  
-![Setup](C:\Users\ryana\OneDrive\Documents\NetBeansProjects\ChessGame\images)
+![Setup](https://camo.githubusercontent.com/fd302c552c2e7a5a102336004cd42d2abfa6321739d65b66ba950125e5f3c8b5/687474703a2f2f7777772e6368657373677572752e6e65742f63686573735f72756c65732f706f736974696f6e2e706e67)
