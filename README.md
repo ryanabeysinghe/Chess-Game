@@ -1,5 +1,7 @@
 # Chess Game
 
+* [Chest Game](./src)
+
 Chest Game which encompasses a Two Dimensional Graphical User Interface in Java
 
 Use NetBeans IDE to be able to display the Graphical User Interface Chess Board (Other IDE's may result in no visibility for the GUI)
@@ -19,5 +21,3 @@ Use NetBeans IDE to be able to display the Graphical User Interface Chess Board 
   * King : 1 piece
 * Initial setup :  
 ![Setup](http://www.chessguru.net/chess_rules/position.png)
-
-* [Chest Game](./src)
