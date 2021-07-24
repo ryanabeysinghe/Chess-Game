@@ -65,7 +65,7 @@ public class Rook extends Piece {
         
         if(direction.equals("south")) {
             int spacesToMove = Math.abs(destination_y - this.getY()); 
-            for (int i = 0; i < spacesToMove; i++) {
+            for (int i = 1; i < spacesToMove; i++) {
                 Piece possibleSpaces = board.getPiece(this.getX(), this.getY() + i);
                 if (possibleSpaces != null) {
                     return false; 
@@ -73,6 +73,35 @@ public class Rook extends Piece {
             }
         }
         
+        if(direction.equals("north")) {
+            int spacesToMove = Math.abs(destination_y - this.getY()); 
+            for (int i = 1; i < spacesToMove; i++) {
+                Piece possibleSpaces = board.getPiece(this.getX(), this.getY() - i);
+                if (possibleSpaces != null) {
+                    return false; 
+                }
+            }
+        }
+        
+        if(direction.equals("east")) {
+            int spacesToMove = Math.abs(destination_x - this.getX()); 
+            for (int i = 1; i < spacesToMove; i++) {
+                Piece possibleSpaces = board.getPiece(this.getX() + i, this.getY());
+                if (possibleSpaces != null) {
+                    return false; 
+                }
+            }
+        }
+        
+        if(direction.equals("west")) {
+            int spacesToMove = Math.abs(destination_x - this.getX()); 
+            for (int i = 1; i < spacesToMove; i++) {
+                Piece possibleSpaces = board.getPiece(this.getX() - i, this.getY());
+                if (possibleSpaces != null) {
+                    return false; 
+                }
+            }
+        }
         
         return true;
     }
